@@ -1337,7 +1337,7 @@ namespace AzureADConnectConfigDocumenter
                     this.ReportWriter.WriteBeginTag("span");
                     this.ReportWriter.WriteAttribute("class", cellClass);
                     this.ReportWriter.WriteLine(HtmlTextWriter.TagRightChar);
-                    this.ReportWriter.Write("(" + syncVersionPilot + ")");
+                    this.ReportWriter.Write("(" + syncVersionPilot + "):");
                     this.ReportWriter.WriteEndTag("span");
                 }
 
@@ -1358,7 +1358,7 @@ namespace AzureADConnectConfigDocumenter
                     this.ReportWriter.WriteBeginTag("span");
                     this.ReportWriter.WriteAttribute("class", cellClass);
                     this.ReportWriter.WriteLine(HtmlTextWriter.TagRightChar);
-                    this.ReportWriter.Write("(" + syncVersionProduction + ")");
+                    this.ReportWriter.Write("(" + syncVersionProduction + "):");
                     this.ReportWriter.WriteEndTag("span");
                 }
 
@@ -1470,6 +1470,7 @@ namespace AzureADConnectConfigDocumenter
                 this.ReportWriter.WriteBeginTag("input");
                 this.ReportWriter.WriteAttribute("type", "checkbox");
                 this.ReportWriter.WriteAttribute("id", "OnlyShowChanges");
+                this.ReportWriter.WriteAttribute("disabled", null);
                 this.ReportWriter.WriteAttribute("onclick", "ToggleVisibility();");
                 this.ReportWriter.WriteLine(HtmlTextWriter.SelfClosingTagEnd);
 
@@ -1491,7 +1492,19 @@ namespace AzureADConnectConfigDocumenter
                 this.ReportWriter.WriteBeginTag("input");
                 this.ReportWriter.WriteAttribute("type", "checkbox");
                 this.ReportWriter.WriteAttribute("id", "HideDefaultSyncRules");
+                this.ReportWriter.WriteAttribute("disabled", null);
                 this.ReportWriter.WriteAttribute("onclick", "ToggleDefaultRuleVisibility();");
+                this.ReportWriter.WriteLine(HtmlTextWriter.SelfClosingTagEnd);
+
+                this.ReportWriter.WriteFullBeginTag("strong");
+                this.ReportWriter.Write("Hide End-to-end Summary Flows:");
+                this.ReportWriter.WriteEndTag("strong");
+
+                this.ReportWriter.WriteBeginTag("input");
+                this.ReportWriter.WriteAttribute("type", "checkbox");
+                this.ReportWriter.WriteAttribute("id", "HideEndToEndFlowsSummary");
+                this.ReportWriter.WriteAttribute("disabled", null);
+                this.ReportWriter.WriteAttribute("onclick", "ToggleEndToEndFlowsSummaryVisibility();");
                 this.ReportWriter.WriteLine(HtmlTextWriter.SelfClosingTagEnd);
 
                 this.WriteBreakTag();

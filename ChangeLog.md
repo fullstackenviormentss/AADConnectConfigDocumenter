@@ -5,7 +5,32 @@ All notable changes to AADConnectConfigDocumenter project will be documented in 
 ### Version [Unreleased]
 
 * Support for adding report metadata to include section / concept contents.
-* Support for ignoring change to OOB rules if only precedence number is changed (due to upgrade / forest addition).
+
+------------
+
+### Version 1.18.0928.0
+
+#### Fixed
+- Fixed issue where the "Download Sync Rule Changes Script" link was not working in Chrome / Firefox.
+
+------------
+
+### Version 1.18.0613.0
+
+#### Fixed
+- Fixed issue where the "Selected Attributes" section of a connector wrongly documented that an attribute had export flows configured when none existed.
+
+------------
+
+### Version 1.18.0302.0
+
+#### Changed
+- The "Hide Default Sync Rules" option selection now hides the OOB rules when not only the rule is not changed at all but also when only precedence number or tag is changed (due to upgrade / forest addition). 
+- The visibility control checkboxes are now enabled only after the browser loads the report completely. 
+
+#### Added
+- Added ability to hide "End-to-End Attribute Flows" sections.
+
 ------------
 
 ### Version 1.18.0131.0
